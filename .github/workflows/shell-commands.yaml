@@ -1,0 +1,19 @@
+name : Shell Commands Demo
+
+on :
+    workflow_dispatch :
+
+jobs :
+    shell-commands-job :
+        runs-on : ubuntu-latest
+
+        steps :
+            - name : Run single Shell command
+              run : echo "This is my first task"
+            
+            - name : Run multiple Shell commands
+              run : |
+                    echo "This is my second task"
+                    pwd
+                    ls -la
+                    echo "This is my third task"
