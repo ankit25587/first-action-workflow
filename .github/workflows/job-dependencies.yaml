@@ -8,19 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build step
-        run: |
-            exit 1 
-            echo "Building the application"
+        run: echo "Building the application"
 
   test:
-    #needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Test step
         run: echo "Running tests"
 
   deploy:
-    #needs: test
+    needs: 
+        - test
+        - build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy step
