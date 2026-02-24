@@ -11,9 +11,7 @@ jobs :
             - name : Run single Shell command
               run : echo "This is my first task"
             
-            - name : Run multiple Shell commands
+            - name : Run multiple python command
               run : |
-                    echo "This is my second task"
-                    pwd
-                    ls -la
-                    echo "This is my third task"
+                    python -c "print('This is my second task')"
+                    python --version
