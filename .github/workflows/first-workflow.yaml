@@ -3,13 +3,11 @@
 # This is the name of the workflow
 name : First Workflow
 
-# This section defines the event that triggers the workflow
-# details that the workflow will run when there is a push to the main branch
-on :
-    push :
-        branches :
-            - main
+# This section defines the event that triggers the workflow manually
 
+on :
+    workflow_dispatch :
+        
 # This section defines the jobs that will be run as part of the workflow
 
 jobs :
