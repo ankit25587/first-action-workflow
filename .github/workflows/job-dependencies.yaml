@@ -1,0 +1,23 @@
+name: Job Dependencies Demo
+
+on: 
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "Building the application"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "Running tests"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy step
+        run: echo "Deploying application"
