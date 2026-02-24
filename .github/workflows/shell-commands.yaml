@@ -8,10 +8,10 @@ jobs :
         runs-on : ubuntu-latest
 
         steps :
+            - name : intentional failure
+              run : exit 1
+              
             - name : Run single Shell command
               run : echo "This is my first task"
             
-            - name : Run multiple python command
-              run : |
-                    python -c "print('This is my second task')"
-                    python --version
+            
