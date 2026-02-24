@@ -5,7 +5,7 @@ on : workflow_dispatch
 jobs :
     linux-job :
         runs-on : ubuntu-latest
-
+        
         steps :
             - name : Run a script
               run : |
